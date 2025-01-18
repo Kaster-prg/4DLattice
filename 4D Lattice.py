@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import Axes3D #https://tenpy.readthedocs.io/en/v0.8.1/notebooks/10_visualize_lattice.html
 
 # Key Parameters
 np.random.seed(42)
@@ -44,9 +44,9 @@ def generate_random_4d_vectors(num_vectors, max_length):
         vectors.append(vector)
     return np.array(vectors)
 
-# Visualize 4D Lattice (projected to 3D) with vectors
+# Visualize 4D Lattice (projected to 3D) with vectors -- https://jakevdp.github.io/PythonDataScienceHandbook/04.12-three-dimensional-plotting.html
 def plot_4d_lattice_projection(lattice_points, encrypted_points, vectors):
-    fig = plt.figure()
+    fig = plt.figure() 
     ax = fig.add_subplot(111, projection='3d')
 
     # Project lattice points to 3D by selecting only x, y, z
